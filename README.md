@@ -147,20 +147,21 @@ docker compose up -d
 
 ## Environment Variables
 
-| Parameter               |  Default    | Function                                                  |
-|-------------------------|:----------:|-----------------------------------------------------------|
-| `DEBUG`                 |  `false`   | for debugging the server                                  |
-| `CONNECTIONPASSWORD`    |            | set the password for connecting to the server             |
-| `ADMINPASSWORD`         |            | set the password for admin access to the server           |
-| `ENABLECHEATS`          |  `false`   | enable cheats on the server                               |
-| `LOG`                   |  `false`   | set `true` to disable Nightingale log pruning             |
-| `MAXPLAYERS`            |    `4`     | set the player limit for your server                      |
-| `MULTIHOME`             |   `::`     | set the server's listening interface (usually not needed) |
-| `PGID`                  |  `1000`    | set the group ID of the user the server will run as       |
-| `PUID`                  |  `1000`    | set the user ID of the user the server will run as        |
-| `SERVERGAMEPORT`        |  `7777`    | set the game's server port                                |
-| `SKIPUPDATE`            |  `false`   | avoid updating the game on container start/restart        |
-| `TIMEOUT`               |   `30`     | set client timeout (in seconds)                           |
+| Parameter               |  Default                          | Function                                                  |
+|-------------------------|:---------------------------------:|-----------------------------------------------------------|
+| `DEBUG`                 |  `false`                          | for debugging the server                                  |
+| `CONNECTIONPASSWORD`    |                                   | set the password for connecting to the server             |
+| `ADMINPASSWORD`         |                                   | set the password for admin access to the server           |
+| `STARTINGDIFFICULTY`    |  `easy, medium, hard, extreme`    | set the starting difficulty of the realm in use           |
+| `ENABLECHEATS`          |  `false`                          | enable cheats on the server                               |
+| `LOG`                   |  `false`                          | set `true` to disable Nightingale log pruning             |
+| `MAXPLAYERS`            |    `4`                            | set the player limit for your server                      |
+| `MULTIHOME`             |   `::`                            | set the server's listening interface (usually not needed) |
+| `PGID`                  |  `1000`                           | set the group ID of the user the server will run as       |
+| `PUID`                  |  `1000`                           | set the user ID of the user the server will run as        |
+| `SERVERGAMEPORT`        |  `7777`                           | set the game's server port                                |
+| `SKIPUPDATE`            |  `false`                          | avoid updating the game on container start/restart        |
+| `TIMEOUT`               |   `30`                            | set client timeout (in seconds)                           |
 
 ## Running as Non-Root User
 

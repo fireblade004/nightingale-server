@@ -71,6 +71,13 @@ else
     ADMINPASSWORD=""
 fi
 
+# Check if difficulty is set and create the argument
+if [[ "$STARTINGDIFFICULTY" != "" ]]; then
+    STARTINGDIFFICULTY="-ini:ServerSettings:[/Script/NWX.NWXServerSettings]:StartingDifficulty=$STARTINGDIFFICULTY"
+else
+    STARTINGDIFFICULTY=""
+fi
+
 # Handle server status port
 if [[ "$SERVERGAMEPORT" = "8888" ]]; then
     SERVERSTATUSPORT="8889"
