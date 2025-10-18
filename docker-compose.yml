@@ -1,0 +1,22 @@
+services:
+  nightingale-server:
+    container_name: 'nightingale-server'
+    hostname: 'nightingale-server'
+    image: 'fireblade004/nightingale-server:latest'
+    ports:
+      - '7777:7777/tcp'
+      - '7777:7777/udp'
+    volumes:
+      - './nightingale-server:/config'
+      - './savedata:/config/gamefiles/NWX/Saved'
+    environment:
+      - MAXPLAYERS=4
+      - PGID=1000
+      - PUID=1000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+        reservations:
+          memory: 4G
