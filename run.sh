@@ -90,6 +90,7 @@ ini_args=(
     "$ADMINPASSWORD"
     "-ini:Game:[/Script/Engine.GameSession]:MaxPlayers=$MAXPLAYERS"
     "$ENABLECHEATS"
+    "$STARTINGDIFFICULTY"
     "-statusPort=$SERVERSTATUSPORT"
 )
 
